@@ -58,17 +58,5 @@ public class Test {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        try {
-            String query = "SELECT * FROM customer";
-            preparedStatement = databaseConnection.getConnection().prepareStatement(query);
-            resultSet = preparedStatement.executeQuery(query);
-
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString(2));
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
